@@ -24,8 +24,8 @@ export const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     setUser({
-      name: "Marry Doe", 
-      email: credentials.email || "Marry@Gmail.com",
+      name: "", 
+      email: credentials.email,
       phone: "9876543210",
       company: "PopX Inc"
     });

@@ -4,8 +4,8 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({
-    name: "Marry Doe",
-    email: "Marry@Gmail.com",
+    name: "",
+    email: "",
     phone: "",
     company: "",
     isAgency: null
