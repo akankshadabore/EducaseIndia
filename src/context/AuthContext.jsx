@@ -4,10 +4,10 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
+    name: "Akanksha Dabore",
+    email: "akanksha@gmail.com",
+    phone: "123456789",
+    company: "Oxella AI",
     isAgency: null
   });
 
