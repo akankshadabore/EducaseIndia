@@ -1,12 +1,23 @@
-import { useState, useRef, useMemo } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { IoCamera } from "react-icons/io5";
 
-
 export const ProfilePage = () => {
   const { user } = useAuth();
+  const navigate = useNavigate();
   const [profileImage, setProfileImage] = useState(null);
   const fileInputRef = useRef(null);
+
+  useEffect(() => {
+    if (!user || !user.email) {
+      navigate('/login');
+    }
+  }, [user, navigate]);
+
+  if (!user || !user.email) {
+    return null; 
+  }
 
   const displayName = useMemo(() => {
     if (user?.name?.trim()) return user.name.trim();
@@ -76,8 +87,7 @@ export const ProfilePage = () => {
           Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam
         </p>
       </div>
-      <div className="grow border-t border-dashed border-gray-300 mt-120 bg-[#F7F8F9]"></div>
+      <div className="grow border-t border-dashed border-gray-300 mt-12 bg-[#F7F8F9]"></div>
     </div>
   );
 };
-

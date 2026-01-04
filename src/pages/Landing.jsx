@@ -15,7 +15,6 @@ export const LandingPage = () => {
 
   return (
     <div className="relative flex flex-col justify-end min-h-screen p-6 bg-[#F7F8F9] max-w-md mx-auto overflow-hidden border border-gray-100 shadow-lg">
-      
       <div className="absolute inset-0 pointer-events-none">
         {circles.map((circle) => (
           <div
@@ -25,7 +24,8 @@ export const LandingPage = () => {
               left: circle.left,
               transform: 'translate(-50%, -50%)' 
             }}
-            className="absolute w-8 h-8 bg-[#E8B94B] hover:bg-[#2f82e6] rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-sm">
+            className="absolute w-8 h-8 bg-[#E8B94B] hover:bg-[#2f82e6] transition-all duration-300 cursor-pointer pointer-events-auto
+             rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-sm">
             {circle.id}
           </div>
         ))}
@@ -39,14 +39,9 @@ export const LandingPage = () => {
       </div>
 
       <div className="relative z-10 space-y-3 mb-10">
-        <Button onClick={() => navigate('/signup')}>
-          Create Account
-        </Button>
-        <Button variant="secondary" onClick={() => navigate('/login')}>
-          Already Registered? Login
-        </Button>
+        <Button onClick={() => navigate('/signup')}>Create Account</Button>
+        <Button variant="secondary" onClick={() => navigate('/login')}>Already Registered? Login</Button>
       </div>
-      
     </div>
   );
 };

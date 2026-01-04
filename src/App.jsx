@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import { LandingPage } from '../src/pages/Landing';
+import { Toaster } from 'react-hot-toast';
+import { LandingPage } from './pages/Landing';
 import { LoginPage } from './pages/LoginPage';
 import { SignupPage } from './pages/SignupPage';
 import { ProfilePage } from './pages/ProfilePage';
@@ -8,6 +9,7 @@ import { ProfilePage } from './pages/ProfilePage';
 function App() {
   return (
     <AuthProvider>
+      <Toaster position="top-center" reverseOrder={false} />
       <div className="bg-white">
         <Router>
           <Routes>
