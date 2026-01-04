@@ -35,7 +35,7 @@ export const SignupPage = () => {
         <h1 className="text-3xl font-bold text-[#1D2226] leading-tight">
           Create your <br/> PopX account
         </h1>
-        <div className="mt-2 ml-0 w-7 h-7 bg-[#E8B94B] rounded-full flex items-center justify-center text-white font-semibold text-sm shrink-0 shadow-sm">
+        <div className="mt-2 ml-0 w-7 h-7 bg-[#E8B94B] hover:bg-[#2f82e6] rounded-full flex items-center justify-center text-white font-semibold text-sm shrink-0 shadow-sm">
           1
         </div>
       </div>

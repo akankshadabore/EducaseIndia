@@ -25,8 +25,7 @@ export const LandingPage = () => {
               left: circle.left,
               transform: 'translate(-50%, -50%)' 
             }}
-            className="absolute w-8 h-8 bg-[#E8B94B] rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-sm"
-          >
+            className="absolute w-8 h-8 bg-[#E8B94B] hover:bg-[#2f82e6] rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-sm">
             {circle.id}
           </div>
         ))}
