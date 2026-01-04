@@ -4,17 +4,17 @@ import { Button } from '../components/ui/Button';
 export const LandingPage = () => {
   const navigate = useNavigate();
 
-  const circles = [
-    { id: 6, top: '12%', left: '15%' },
-    { id: 1, top: '25%', left: '38%' },
-    { id: 2, top: '32%', left: '42%' },
-    { id: 3, top: '41%', left: '58%' },
-    { id: 4, top: '48%', left: '73%' },
-    { id: 5, top: '58%', left: '87%' },
+ const circles = [
+    { id: 6, top: '18%', left: '33%' },
+    { id: 1, top: '25%', left: '44%' },
+    { id: 2, top: '30%', left: '46%' },
+    { id: 3, top: '34%', left: '54%' },
+    { id: 4, top: '38%', left: '61%' },
+    { id: 5, top: '42%', left: '68%' },
   ];
 
   return (
-    <div className="relative flex flex-col justify-end min-h-screen p-6 bg-[#F7F8F9] max-w-md mx-auto overflow-hidden border border-gray-100 shadow-lg">
+    <div className="relative w-full max-w-90 h-screen-full min-h-190  flex flex-col justify-end p-6 bg-[#F7F8F9] mx-auto overflow-hidden border border-gray-200">
       <div className="absolute inset-0 pointer-events-none">
         {circles.map((circle) => (
           <div
@@ -24,8 +24,8 @@ export const LandingPage = () => {
               left: circle.left,
               transform: 'translate(-50%, -50%)' 
             }}
-            className="absolute w-8 h-8 bg-[#E8B94B] hover:bg-[#2f82e6] transition-all duration-300 cursor-pointer pointer-events-auto
-             rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-sm">
+            className="absolute w-6 h-6 bg-[#e4aa21] hover:bg-[#2f82e6] transition-all duration-300 cursor-pointer pointer-events-auto
+             rounded-full flex items-center justify-center text-white font-normal text-xs shadow-sm">
             {circle.id}
           </div>
         ))}

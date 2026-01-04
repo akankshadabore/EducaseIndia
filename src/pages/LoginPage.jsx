@@ -38,7 +38,7 @@ export const LoginPage = () => {
   const isFormEmpty = !credentials.email || !credentials.password;
 
   return (
-    <div className="flex flex-col min-h-screen p-6 bg-white max-w-md mx-auto">
+    <div className="flex flex-col w-full max-w-90 h-screen-full min-h-190 p-6 bg-[#F7F8F9] overflow-hidden border border-gray-200 mx-auto">
       <div className="mt-4 mb-8">
         <h1 className="text-3xl font-bold text-[#1D2226] mb-2 leading-tight">Signin to your <br /> PopX account</h1>
         <p className="text-[#6E6E6E] text-lg w-3/4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>

@@ -40,8 +40,8 @@ export const ProfilePage = () => {
   };
 
   return (
-    <div className="bg-[#F7F8F9] min-h-screen max-w-md mx-auto flex flex-col font-sans">
-      <div className="bg-white p-5 border-b border-gray-200">
+    <div className="bg-[#F7F8F9] min-h-190 w-full max-w-90 mx-auto flex flex-col font-sans overflow-hidden border border-gray-200">
+      <div className="bg-white p-5 shadow-xs">
         <h2 className="text-xl font-medium text-[#1D2226]">Account Settings</h2>
       </div>
       <div className="p-5 border-b border-dashed border-gray-300">
@@ -87,7 +87,7 @@ export const ProfilePage = () => {
           Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam
         </p>
       </div>
-      <div className="grow border-t border-dashed border-gray-300 mt-12 bg-[#F7F8F9]"></div>
+      <div className="grow border-t border-dashed border-gray-300 mt-100 bg-[#F7F8F9]"></div>
     </div>
   );
 };
