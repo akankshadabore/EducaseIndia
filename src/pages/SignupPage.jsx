@@ -73,6 +73,7 @@ export const SignupPage = () => {
             label="Password" 
             name="password" 
             type="password"
+            showStrength={true}
             placeholder="Enter Your Password"
             value={formData.password} 
             onChange={handleChange} 

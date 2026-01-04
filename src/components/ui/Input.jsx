@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
-export const Input = ({ label, type = "text", placeholder, value, onChange, name, required }) => {
+
+export const Input = ({ label, type = "text", placeholder, value, onChange, name, required, showStrength = false }) => {
   const [strengthMessage, setStrengthMessage] = useState("");
   const [msgColor, setMsgColor] = useState("");
+
   useEffect(() => {
-    if (name !== 'password') return;
+    if (name !== 'password' || !showStrength) {
+      setStrengthMessage("");
+      return;
+    }
+
     const timer = setTimeout(() => {
       const len = value.length;
       if (len === 0) {
@@ -23,8 +29,10 @@ export const Input = ({ label, type = "text", placeholder, value, onChange, name
         setMsgColor("text-green-700");
       }
     }, 500);
+
     return () => clearTimeout(timer);
-  }, [value, name]);
+  }, [value, name, showStrength]);
+
   const handleInputChange = (e) => {
     let val = e.target.value;
     if (name === 'phone') val = val.replace(/[^0-9]/g, '');
@@ -32,6 +40,7 @@ export const Input = ({ label, type = "text", placeholder, value, onChange, name
     if (name === 'email') val = val.replace(/\s/g, '');
     onChange({ target: { name, value: val } });
   };
+
   return (
     <div className="relative mb-5">
       <input
@@ -46,7 +55,7 @@ export const Input = ({ label, type = "text", placeholder, value, onChange, name
       <label className="absolute left-3 -top-2.5 bg-[#F7F8F9] px-1 text-[#6C25FF] text-xs font-light">
         {label}{required && <span className="text-red-500">*</span>}
       </label>
-      {name === 'password' && strengthMessage && (
+      {showStrength && name === 'password' && strengthMessage && (
         <p className={`text-[10px] mt-1 ml-1 font-bold ${msgColor} italic`}>
           {strengthMessage}
         </p>
@@ -54,4 +63,3 @@ export const Input = ({ label, type = "text", placeholder, value, onChange, name
     </div>
   );
 };
-

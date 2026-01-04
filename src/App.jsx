@@ -8,7 +8,7 @@ import { ProfilePage } from './pages/ProfilePage';
 function App() {
   return (
     <AuthProvider>
-      <div className="bg-gray-100 min-h-screen">
+      <div className="bg-white">
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
