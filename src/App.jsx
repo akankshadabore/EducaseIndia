@@ -10,7 +10,7 @@ function App() {
   return (
     <AuthProvider>
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="bg-white flex justify-center items-center mt-6">
+      <div className="bg-white flex justify-center items-center sm:mt-6">
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />

@@ -14,7 +14,7 @@ export const LandingPage = () => {
   ];
 
   return (
-    <div className="relative w-full max-w-90 h-screen-full min-h-190  flex flex-col justify-end p-6 bg-[#F7F8F9] mx-auto overflow-hidden border border-gray-200">
+    <div className="relative w-full sm:max-w-90 h-screen-full  h-screen sm:min-h-190  flex flex-col justify-end p-6 bg-[#F7F8F9] mx-auto overflow-hidden border border-gray-200">
       <div className="absolute inset-0 pointer-events-none">
         {circles.map((circle) => (
           <div

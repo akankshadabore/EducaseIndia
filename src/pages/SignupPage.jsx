@@ -24,7 +24,7 @@ export const SignupPage = () => {
   };
 
   return (
-    <div className="w-full max-w-95 h-screen-full min-h-190 p-6 bg-[#F7F8F9] mx-auto overflow-hidden border border-gray-200 flex flex-col">
+    <div className="w-full sm:max-w-95 h-screen sm:min-h-190 p-6 bg-[#F7F8F9] mx-auto overflow-hidden border border-gray-200 flex flex-col">
       <div className="flex items-start gap-4 mb-8 mt-4">
         <h1 className="text-3xl font-bold text-[#1D2226] leading-tight">Create your <br/> PopX account</h1>
         <div className="mt-2 w-7 h-7 bg-[#E8B94B] hover:bg-[#2f82e6] rounded-full flex items-center justify-center text-white font-semibold text-sm">1</div>
